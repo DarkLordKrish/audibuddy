@@ -1,4 +1,4 @@
-# audibuddy
+# AudiBuddy
 this is the code for our application audibuddy
 this is an android application for speech and hearning impaired people.
 this application will have two main features - converting sppech to text and converting text to speech
