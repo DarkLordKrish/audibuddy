@@ -7,6 +7,5 @@ engine = pyttsx3.init()
 def texttospeech():
   engine = pyttsx3.init()
   text_data = input("Type something: ")
- # tts = gtts.gTTS(text_data)
   engine.say(text_data)
   engine.runAndWait()
