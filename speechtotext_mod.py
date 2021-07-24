@@ -5,9 +5,10 @@ import speech_recognition as sr
 r = sr.Recognizer()
 
 def Speechtotext():
-  print("Say something: ")
+  
   with sr.Microphone() as source:
   #    read audio from mic
+    print("Say something: ")
     try:
       audio_data = r.listen(source,phrase_time_limit=5)
       print("Recognising......")

@@ -1,7 +1,7 @@
 import speechtotext_mod
 import texttospeech_mod
 
-feature_choice = input("What feature do u want?\nspeech to text\ntext to speech")
+feature_choice = input("What feature do u want? \n speech to text \n text to speech")
 
 if feature_choice == "speech to text":
     speechtotext_mod.Speechtotext() 
