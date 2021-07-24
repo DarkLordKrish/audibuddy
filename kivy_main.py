@@ -10,5 +10,5 @@ from kivy.uix.textinput import TextInput
 class Audibuddy(App):
     def build(self):
         return Label(text = "Does this work")
-if __name__ == "__main__":
+if __name__  ==  "__main__":
     Audibuddy().run()
