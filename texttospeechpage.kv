@@ -1,0 +1,24 @@
+<Texttospeech>
+    textinput:textinput
+    GridLayout:
+        rows:3
+        size:root.width-200,root.height-200
+        pos:100,100
+        GridLayout:
+            rows:3
+            size:10,10
+            Label:
+                text: "Type your text: "
+                
+            TextInput:
+                id:textinput
+                multiline:False
+              
+        Button:
+            text: "Convert to speech: "
+            on_press:root.Texttospeech()
+        Button:
+            text:"Exit"
+            size:10,10
+            on_press:root.exit()
+           
