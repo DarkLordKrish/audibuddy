@@ -76,6 +76,11 @@ class texttospeech(Screen):
     def texttospeechfas(self):
         self.engine.say(self.ids.text.text)
         self.engine.runAndWait()
+class aboutus(Screen):
+     LabelBase.register(name='Roboto-Thin', 
+                   fn_regular='Roboto-Thin.ttf')
+     def exit(self):
+        quit()
 class WindowManager(ScreenManager):
     def exit(self):
         quit()

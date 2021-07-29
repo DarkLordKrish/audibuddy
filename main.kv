@@ -2,6 +2,7 @@ WindowManager:
     MainWindow:
     speechtotext:
     texttospeech:
+    aboutus:
 
 <Mainwindow>:
     name:"mainwindow"
@@ -79,9 +80,23 @@ WindowManager:
                 font_name:"Roboto-Medium"
                 font_size:20
                 size_hint:0.1,0.15
-                pos_hint:{"top":0.5,"centre_x":0.5}
+                pos_hint:{"top":0.25,"centre_x":0.5}
                 on_release:
                     app.root.exit()
+        BoxLayout:
+            padding:100,150,100,50
+            Button:
+                id:aboutus_btn
+                text:"About Us"
+                background_normal:""
+                background_color:(0.94117647058,0.94117647058,0.94117647058,.1)
+                font_name:"Roboto-Medium"
+                font_size:20
+                size_hint:0.1,0.15
+                pos_hint:{"top":0.5,"centre_x":0.5}
+                on_release:
+                    app.root.current = "fourth_window"
+            
         Button:
             background_normal:"home-icon.webp"
             background_down:"home-icon.webp"
@@ -91,10 +106,11 @@ WindowManager:
                 app.root.current = "mainwindow"
                 root.manager.transition.direction = "right"
         Label:
-            text:"v1.0-Beta"
+            text:"v1.1-Beta"
             size_hint:0.1,0.1
             pos_hint:{"top":0.09,"right":0.9}
             font_name:"Roboto-Medium"
+        
 <speechtotext>:
     name:"second_window"
     BoxLayout:
@@ -231,11 +247,83 @@ WindowManager:
             pos_hint:{"top":0.3,"center_x":0.5}
             on_release:
                 root.texttospeechfas()
-            
-            
-            
-            
+<aboutus>:
+
+    name:"fourth_window"
+    BoxLayout:
+        Button:
+            font_size:25
+            colour:1,1,1,1
+    BoxLayout:
+        canvas:
+            Color:
+                rgba:0.16862745098,0.16862745098,0.16862745098,1
+            Rectangle:
+                pos:self.pos
+                size:self.size
+    BoxLayout:
+        pos_hint:{'top':1.456}
+        size_hint:2,0.57
+        canvas:
+            Color:
+                rgba:0.09803921568,0.13725490196,0.17647058823,1
+            Rectangle:
+                pos:self.pos
+                size:self.size
     
+    FloatLayout:
+        
+        BoxLayout:
+            
+            orientation:'horizontal'
+            padding:5,0,0,0
+            Label:
+                text:"audibuddy"
+                font_name:"Roboto-Thin"
+                font_size:30
+                
+                pos_hint:{"top":1.45,"left":1}
+        
+        Widget:
+        Widget:
+        Button:
+            background_normal:"home-icon.webp"
+            background_down:"home-icon.webp"
+            size_hint:0.2,0.1
+            pos_hint:{"top":0.994,"left":1}
+            on_release:
+                app.root.current = "mainwindow"
+                root.manager.transition.direction = "right"
+        Label:
+            text:"Application made by"
+            pos_hint:{"top":1.25}
+            font_size:20
+        Label:
+            text:"Krish Ichpal"
+            pos_hint:{"top":1.15}
+            font_size:50
+            font_name:"Roboto-Black"
+            color:110/255, 8/255, 28/255,1
+        Label:
+            text:"and"
+            pos_hint:{"top":1.05}
+            font_size:20
+        Label:
+            text:"Khyati Ghai"
+            pos_hint:{"top":0.95}
+            font_size:35
+            font_name:"Roboto-Black"
+            color:110/255, 8/255, 28/255,1
+        Label:
+            text:"Contact Info:"
+            pos_hint:{"top":0.8}
+            font_size:25
+        Label:
+            text:"krishichpal5@gmail.com"
+            pos_hint:{"top":0.7}
+            font_size:20
+        
+
 
 
 
